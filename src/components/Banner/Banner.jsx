@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {BannerStyle, Texto} from "./Style";
+import Botao from "../Botao/Botao";
 
 const Banner = () => (
     <BannerStyle>
@@ -12,6 +13,13 @@ const Banner = () => (
                 </div>
                 <div className={"Subtitulo"}>
                     Você está cansado de tentar de tudo e não conseguir resultados? Chegou a hora de mudar isso de vez!
+                </div>
+
+                <div className={"botao"}>
+                    <Botao
+                        texto="CLIQUE AQUI E SAIBA MAIS"
+                        link=""
+                    />
                 </div>
             </div>
         </Texto>

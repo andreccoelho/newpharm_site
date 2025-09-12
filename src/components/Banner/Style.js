@@ -41,11 +41,6 @@ export const BannerStyle = styled.div`
         min-width: 5em;
         text-decoration: none;
         font-weight: bold;
-
-        &:hover {
-            background-color: var(--destaque);
-            color: var(--secundaria);
-        }
     }
 
     .Titulo {
@@ -55,6 +50,8 @@ export const BannerStyle = styled.div`
         line-height: 164.723%; /* 4.94169rem */
         text-transform: capitalize;
         min-width: 37.4375rem;
+        margin: 1.5rem 0;
+        
 
         background: linear-gradient(180deg, #415AC5 0%, #7241B4 100%);
         background-clip: text;
@@ -82,6 +79,7 @@ export const BannerStyle = styled.div`
         font-weight: 400;
         line-height: 164.723%; /* 2.47088rem */
         min-width: 40.4375rem;
+        margin-bottom: 6rem;
 
         animation: slideIn 1.5s ease-out;
 

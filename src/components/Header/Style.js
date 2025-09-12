@@ -30,6 +30,12 @@ const Top = styled.header`
         flex-direction: row;
         align-items: center;
         gap: 2em;
+       
+
+    }
+    .menu-itens a:hover {
+        color: var(--azul);
+        transform: scale(1.1);
     }
 `
 
