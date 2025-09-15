@@ -1,6 +1,6 @@
 import React from 'react';
-import { BotaoStyle } from './Style';
-const Botao = ({ texto, link }) => {
+import { Botao2Style } from './Style';
+const Botao2 = ({ link }) => {
     const handleClick = () => {
         if (link) {
             window.open(link, "_blank");
@@ -8,12 +8,12 @@ const Botao = ({ texto, link }) => {
     };
 
     return (
-        <BotaoStyle>
+        <Botao2Style>
             <button onClick={handleClick}>
-                <a>{texto}</a>
+                <a>Entenda Melhor ———➤</a>
             </button>
-        </BotaoStyle>
+        </Botao2Style>
     );
 };
 
-export default Botao;
+export default Botao2;
