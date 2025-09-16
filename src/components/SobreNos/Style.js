@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const SobreNosStyle = styled.div`
     display: flex;
     flex-direction: row;
-    padding-top: 5rem;
+    padding: 5rem 15rem;
     
     .conteudo {
         display: flex;

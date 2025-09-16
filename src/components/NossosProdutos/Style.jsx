@@ -4,8 +4,8 @@ export const NossosProdutosStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5rem;
     background: #F9F9F9;
+    padding: 5rem 15rem;
     
     p {
         max-width: 44.4375rem;

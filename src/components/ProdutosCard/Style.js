@@ -5,7 +5,7 @@ export const ProdutosCardStyle = styled.div`
     flex-shrink: 0;
     border-radius: 0.625rem;
     background: #FFF;
-    box-shadow: 0 4px 17.1px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     padding: 0 2rem 2.5rem;
 
 

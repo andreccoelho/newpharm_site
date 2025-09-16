@@ -18,6 +18,7 @@ export const BotaoStyle = styled.div`
         width: 28.5rem;
         height: 4.6875rem;
         flex-shrink: 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
 
     a {

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Banner from "../components/Banner/Banner";
 import SobreNos from "../components/SobreNos/SobreNos";
 import NossosProdutos from "../components/NossosProdutos/NossosProdutos";
+import ComoFunciona from "../components/ComoFunciona/ComoFunciona";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <Banner/>
         <SobreNos/>
         <NossosProdutos/>
+        <ComoFunciona/>
     </Base>
   )
 }

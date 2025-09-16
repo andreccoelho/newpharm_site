@@ -12,8 +12,8 @@ export const BannerStyle = styled.div`
     margin: 0;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 0;
     animation: fadeIn 1.5s ease-in-out;
+    padding: 3rem 15rem 0 15rem;
 
     .conteudo-banner {
         max-width: 1440px;
