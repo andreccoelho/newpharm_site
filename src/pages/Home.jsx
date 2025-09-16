@@ -4,12 +4,14 @@ import { auth } from "../config/Firebase";
 import { useEffect } from "react";
 import Banner from "../components/Banner/Banner";
 import SobreNos from "../components/SobreNos/SobreNos";
+import NossosProdutos from "../components/NossosProdutos/NossosProdutos";
 
 const Home = () => {
   return (
     <Base>
         <Banner/>
         <SobreNos/>
+        <NossosProdutos/>
     </Base>
   )
 }

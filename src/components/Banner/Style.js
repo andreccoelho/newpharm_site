@@ -7,14 +7,12 @@ export const BannerStyle = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #FFFECD;
     display: flex;
     flex-direction: row;
     margin: 0;
     align-items: center;
     justify-content: space-between;
     padding: 3rem 0;
-
     animation: fadeIn 1.5s ease-in-out;
 
     .conteudo-banner {
@@ -51,8 +49,6 @@ export const BannerStyle = styled.div`
         text-transform: capitalize;
         min-width: 37.4375rem;
         margin: 1.5rem 0;
-        
-
         background: linear-gradient(180deg, #415AC5 0%, #7241B4 100%);
         background-clip: text;
         -webkit-background-clip: text;
