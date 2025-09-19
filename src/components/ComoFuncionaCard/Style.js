@@ -6,7 +6,7 @@ export const ComoFuncionaCardStyle = styled.div`
     border-radius: 0.625rem;
     background: #FFF;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    max-width: 30rem;
+    max-width: 60rem;
     padding: 1rem 1.5rem;
     
     .icone {

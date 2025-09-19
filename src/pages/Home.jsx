@@ -6,6 +6,7 @@ import Banner from "../components/Banner/Banner";
 import SobreNos from "../components/SobreNos/SobreNos";
 import NossosProdutos from "../components/NossosProdutos/NossosProdutos";
 import ComoFunciona from "../components/ComoFunciona/ComoFunciona";
+import PorQueEscolher from "../components/PorQueEscolher/PorQueEscolher";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <SobreNos/>
         <NossosProdutos/>
         <ComoFunciona/>
+        <PorQueEscolher/>
     </Base>
   )
 }

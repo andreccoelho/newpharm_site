@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ComoFuncionaStyle = styled.div`
-    padding: 5rem 15rem 0 15rem;
+    padding: 5rem 15rem;
     background: #F9F9F9;
     
     p {
@@ -18,7 +18,14 @@ export const ComoFuncionaStyle = styled.div`
         margin-top: 4rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         gap: 3.5rem;
+    }
+    
+    .cards > *:nth-child(odd) {
+        justify-self: start;
+    }
+    
+    .cards > *:nth-child(even) {
+        justify-self: end;
     }
     `

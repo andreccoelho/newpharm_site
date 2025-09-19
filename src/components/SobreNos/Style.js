@@ -4,6 +4,7 @@ export const SobreNosStyle = styled.div`
     display: flex;
     flex-direction: row;
     padding: 5rem 15rem;
+    justify-content: space-between;
     
     .conteudo {
         display: flex;
