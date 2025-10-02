@@ -3,7 +3,7 @@
 import styled from "styled-components"
 
 export const BannerStyle = styled.div`
-    /*background: url("imagens/banner.png");*/
+    background: url("imagens/banner_dktp.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,8 @@ export const BannerStyle = styled.div`
     align-items: center;
     justify-content: space-between;
     animation: fadeIn 1.5s ease-in-out;
-    padding: 3rem 15rem 0 15rem;
+    padding: 4rem 0;
+
 
     .conteudo-banner {
         max-width: 1440px;
@@ -21,6 +22,7 @@ export const BannerStyle = styled.div`
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        padding-left: 15rem;
     }
 
     @keyframes fadeIn {

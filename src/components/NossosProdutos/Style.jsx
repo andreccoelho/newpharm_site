@@ -20,6 +20,7 @@ export const NossosProdutosStyle = styled.div`
     .produtos{
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 10rem;
+        margin-top: 3rem;
     }
     `

@@ -10,7 +10,7 @@ const Botao2 = ({ link }) => {
     return (
         <Botao2Style>
             <button onClick={handleClick}>
-                <a>Entenda Melhor ———➤</a>
+                <a>Entenda melhor ———➤</a>
             </button>
         </Botao2Style>
     );
