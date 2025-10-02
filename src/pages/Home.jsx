@@ -7,6 +7,7 @@ import SobreNos from "../components/SobreNos/SobreNos";
 import NossosProdutos from "../components/NossosProdutos/NossosProdutos";
 import ComoFunciona from "../components/ComoFunciona/ComoFunciona";
 import PorQueEscolher from "../components/PorQueEscolher/PorQueEscolher";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <NossosProdutos/>
         <ComoFunciona/>
         <PorQueEscolher/>
+        <Footer/>
     </Base>
   )
 }

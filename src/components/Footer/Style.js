@@ -1,47 +1,52 @@
 import styled from "styled-components"
 
 const FooterStyle = styled.header`
-    padding: .5em 2em;
-    background-color: #333333;
-    display: flex;
-    flex-direction: column;
+    padding: 3rem 0 3rem 15rem;
+    background: #333;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     a {
-        text-align: center;
-        padding: .3em;
-        margin: 0 .7em;
-        min-width: 5em;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 700;
-        color: #FFFFFF;
-        transition: color 0.3s ease, transform 0.3s ease;
+        color: #F5F5F5;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        text-decoration: none !important;
     }
-
-    .menu a:hover {
-        color: #fffecd;
-        transform: scale(1.1);
-    }
-
-    .imagem {
-        display: flex;
-        justify-content: center;
-        padding: 1em;
-        margin: 0;
-    }
-
+    
     .menu {
         display: flex;
-        justify-content: center;
-        padding: 1.5em;
-        margin: 0;
+        flex-direction: row;
+        gap: 5rem;
+    }
+    
+    .esquerda {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+    
+    .menu-itens {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .linha {
-        border-top: 1px solid #FFFFFF;
-        margin: 0;
-        width: 100%;
+    .direita {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .svgs {
+        display: flex;
+        gap: 2rem;
+    }
     }
     
 
