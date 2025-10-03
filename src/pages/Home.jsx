@@ -12,7 +12,7 @@ import Footer from "../components/Footer/Footer";
 const Home = () => {
   return (
     <Base>
-        <Banner/>
+        <section id={"banner"}><Banner/></section>
         <section id={"sobre"}><SobreNos/></section>
         <section id={"produtos"}><NossosProdutos/></section>
         <section id={"como-funciona"}><ComoFunciona/></section>

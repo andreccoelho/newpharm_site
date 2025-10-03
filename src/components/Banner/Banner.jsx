@@ -21,6 +21,8 @@ const Banner = () => (
                         link=""
                     />
                 </div>
+
+                <div className={"img_mobile"}/>
             </div>
         </Texto>
     </BannerStyle>

@@ -4,14 +4,14 @@ import { Top } from "./Style";
 const Header = () => {
     const [activeSection, setActiveSection] = useState("");
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Função para scroll suave
     const handleScrollTo = (e, sectionId) => {
         e.preventDefault();
         const element = document.getElementById(sectionId);
 
         if (element) {
-            const offset = 80; // Altura do header fixo
+            const offset = 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -20,12 +20,13 @@ const Header = () => {
                 behavior: "smooth"
             });
         }
+
+        // Fecha o menu ao clicar em um item (mobile)
+        setIsMenuOpen(false);
     };
 
-    // Detectar seção ativa ao rolar a página
     useEffect(() => {
         const handleScroll = () => {
-            // Detectar se rolou a página
             setIsScrolled(window.scrollY > 50);
 
             const sections = ["sobre", "produtos", "como-funciona", "por-que-nos"];
@@ -49,6 +50,18 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Previne scroll quando menu está aberto
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuOpen]);
+
     const menuItems = [
         { label: "Sobre nós", id: "sobre" },
         { label: "Produtos", id: "produtos" },
@@ -58,11 +71,27 @@ const Header = () => {
 
     return (
         <Top className={isScrolled ? "scrolled" : ""}>
-            <div className="logo">
+            <div
+                className="logo"
+                onClick={(e) => handleScrollTo(e, "banner")}
+                style={{ cursor: "pointer" }}
+            >
                 <img src="imagens/Logo-horizontal.png" alt="Logo"/>
             </div>
 
-            <div className="menu-itens">
+            {/* Botão Hambúrguer */}
+            <button
+                className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            {/* Menu Desktop e Mobile */}
+            <div className={`menu-itens ${isMenuOpen ? 'open' : ''}`}>
                 {menuItems.map((item) => (
                     <a
                         key={item.id}
@@ -74,6 +103,14 @@ const Header = () => {
                     </a>
                 ))}
             </div>
+
+            {/* Overlay para fechar menu ao clicar fora */}
+            {isMenuOpen && (
+                <div
+                    className="menu-overlay"
+                    onClick={() => setIsMenuOpen(false)}
+                />
+            )}
         </Top>
     );
 };

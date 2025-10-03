@@ -15,14 +15,10 @@ export const BannerStyle = styled.div`
     animation: fadeIn 1.5s ease-in-out;
     padding: 4rem 0;
 
-
-    .conteudo-banner {
-        max-width: 1440px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        padding-left: 15rem;
+    /* Remove background em mobile */
+    @media (max-width: 768px) {
+        background: none;
+        padding: 2rem 0;
     }
 
     @keyframes fadeIn {
@@ -31,6 +27,40 @@ export const BannerStyle = styled.div`
         }
         to {
             opacity: 1;
+        }
+    }
+
+    .conteudo-banner {
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-left: 15rem;
+        padding-right: 2rem;
+
+        @media (max-width: 768px) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .img_mobile {
+        background: url("imagens/banner_mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80vw;
+        height: 200px;
+        margin-top: 2rem;
+        display: none;
+        border-radius: 8px;
+
+        @media (max-width: 768px) {
+            display: block;
         }
     }
 
@@ -47,15 +77,14 @@ export const BannerStyle = styled.div`
         font-size: 3rem;
         font-style: normal;
         font-weight: 600;
-        line-height: 164.723%; /* 4.94169rem */
+        line-height: 164.723%;
         text-transform: capitalize;
-        min-width: 37.4375rem;
+        max-width: 37.4375rem;
         margin: 1.5rem 0;
         background: linear-gradient(180deg, #415AC5 0%, #7241B4 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
         animation: slideIn 1.5s ease-out;
 
         @keyframes slideIn {
@@ -67,6 +96,17 @@ export const BannerStyle = styled.div`
                 transform: translateY(0);
                 opacity: 1;
             }
+        }
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            line-height: 140%;
+            margin: 1rem 0;
+            min-width: auto;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1.5rem;
         }
     }
 
@@ -75,10 +115,9 @@ export const BannerStyle = styled.div`
         font-size: 1.5rem;
         font-style: normal;
         font-weight: 400;
-        line-height: 164.723%; /* 2.47088rem */
-        min-width: 40.4375rem;
+        line-height: 164.723%;
+        max-width: 40.4375rem;
         margin-bottom: 6rem;
-
         animation: slideIn 1.5s ease-out;
 
         @keyframes slideIn {
@@ -91,18 +130,24 @@ export const BannerStyle = styled.div`
                 opacity: 1;
             }
         }
-    }
-    
-    @media (max-width: 768px) {
-        padding: 0 10px;
+
+        @media (max-width: 768px) {
+            font-size: 1.125rem;
+            line-height: 150%;
+            margin-bottom: 2rem;
+            min-width: auto;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
     }
 `
 
 export const Texto = styled.div`
-    max-width: 450px;
-    
+    width: 100%;
+
     @media (max-width: 768px){
-        max-width: 100%;
         text-align: center;
     }
 `
