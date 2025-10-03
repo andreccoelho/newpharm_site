@@ -13,13 +13,13 @@ const Home = () => {
   return (
     <Base>
         <Banner/>
-        <SobreNos/>
-        <NossosProdutos/>
-        <ComoFunciona/>
-        <PorQueEscolher/>
+        <section id={"sobre"}><SobreNos/></section>
+        <section id={"produtos"}><NossosProdutos/></section>
+        <section id={"como-funciona"}><ComoFunciona/></section>
+        <section id={"por-que-nos"}><PorQueEscolher/></section>
         <Footer/>
     </Base>
-  )
+)
 }
 
 export default Home
