@@ -40,8 +40,6 @@ export const BannerStyle = styled.div`
         padding-right: 2rem;
 
         @media (max-width: 768px) {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;

@@ -17,7 +17,6 @@ const Home = () => {
         <section id={"produtos"}><NossosProdutos/></section>
         <section id={"como-funciona"}><ComoFunciona/></section>
         <section id={"por-que-nos"}><PorQueEscolher/></section>
-        <Footer/>
     </Base>
 )
 }
