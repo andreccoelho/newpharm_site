@@ -43,6 +43,8 @@ export const BannerStyle = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 0;
+            gap: 2rem;
         }
     }
 
@@ -51,8 +53,8 @@ export const BannerStyle = styled.div`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        width: 80vw;
-        height: 200px;
+        width: 85vw;
+        height: 250px;
         margin-top: 2rem;
         display: none;
         border-radius: 8px;
@@ -72,18 +74,19 @@ export const BannerStyle = styled.div`
     }
 
     .Titulo {
-        font-size: 3rem;
         font-style: normal;
-        font-weight: 600;
         line-height: 164.723%;
-        text-transform: capitalize;
-        max-width: 37.4375rem;
+        max-width: 40rem;
         margin: 1.5rem 0;
         background: linear-gradient(180deg, #415AC5 0%, #7241B4 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: slideIn 1.5s ease-out;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 164.723%;
+        text-transform: capitalize;
 
         @keyframes slideIn {
             from {
@@ -97,14 +100,14 @@ export const BannerStyle = styled.div`
         }
 
         @media (max-width: 768px) {
-            font-size: 2rem;
-            line-height: 140%;
+            font-size: 2.25rem;
             margin: 1rem 0;
             min-width: auto;
         }
 
         @media (max-width: 480px) {
             font-size: 1.5rem;
+            max-width: 350px;
         }
     }
 
@@ -138,6 +141,7 @@ export const BannerStyle = styled.div`
 
         @media (max-width: 480px) {
             font-size: 1rem;
+            max-width: 350px;
         }
     }
 `

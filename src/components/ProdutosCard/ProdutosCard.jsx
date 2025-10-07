@@ -4,16 +4,20 @@ import Botao from "../Botao/Botao";
 const ProdutosCard = ({ imagem, nome, descricao, link }) => (
     <ProdutosCardStyle>
         <div className="card">
-            <div className={"imagem"}>
-                <img src={imagem} alt={nome} />
+            <div className="imagem-wrapper">
+                <div className="imagem">
+                    <img src={imagem} alt={nome} />
+                </div>
             </div>
-            <div className={"info"}>
+            <div className="info">
                 <h3>{nome}</h3>
                 <p>{descricao}</p>
-                <Botao
-                    texto="SAIBA MAIS"
-                    link={link}
-                />
+                <div className="botao-wrapper">
+                    <Botao
+                        texto="SAIBA MAIS"
+                        link={link}
+                    />
+                </div>
             </div>
         </div>
     </ProdutosCardStyle>

@@ -18,7 +18,7 @@ const Banner = () => (
                 <div className={"botao"}>
                     <Botao
                         texto="CLIQUE AQUI E SAIBA MAIS"
-                        link=""
+                        sectionId="produtos"
                     />
                 </div>
 
