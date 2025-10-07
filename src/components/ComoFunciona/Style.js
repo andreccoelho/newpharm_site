@@ -3,12 +3,13 @@ import styled from "styled-components"
 export const ComoFuncionaStyle = styled.div`
     width: 100%;
     padding: 5rem 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),    url("imagens/fundo.png");
+    background: linear-gradient(rgb(245, 245, 245, 0.5), rgb(245, 245, 245, 0.5)), url("imagens/fundo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     /* Container centralizado */
+
     > * {
         max-width: 1400px;
         margin: 0 auto;
@@ -42,10 +43,26 @@ export const ComoFuncionaStyle = styled.div`
     }
 
     /* Delays progressivos para animação */
-    .cards > *:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
-    .cards > *:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
-    .cards > *:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
-    .cards > *:nth-child(4) { animation-delay: 0.4s; opacity: 0; }
+
+    .cards > *:nth-child(1) {
+        animation-delay: 0.1s;
+        opacity: 0;
+    }
+
+    .cards > *:nth-child(2) {
+        animation-delay: 0.2s;
+        opacity: 0;
+    }
+
+    .cards > *:nth-child(3) {
+        animation-delay: 0.3s;
+        opacity: 0;
+    }
+
+    .cards > *:nth-child(4) {
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
 
     /* Animações */
     @keyframes slideInLeft {

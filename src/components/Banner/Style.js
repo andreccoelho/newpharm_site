@@ -13,6 +13,8 @@ export const BannerStyle = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 4rem 0;
+    width: 100%;
+    box-sizing: border-box;
 
     /* Remove background em mobile */
     @media (max-width: 768px) {
@@ -37,6 +39,7 @@ export const BannerStyle = styled.div`
         margin: 0;
         padding-left: 15rem;
         padding-right: 2rem;
+        box-sizing: border-box;
 
         @media (max-width: 768px) {
             display: flex;
@@ -52,8 +55,9 @@ export const BannerStyle = styled.div`
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             min-height: 400px;
-            width: 85vw;
+            width: 100%;
             justify-content: center;
+            box-sizing: border-box;
 
             /* Overlay escuro com blur */
             &::before {

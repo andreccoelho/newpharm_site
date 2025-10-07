@@ -17,6 +17,7 @@ const Top = styled.header`
     border-bottom: 4px solid var(--azul);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    overflow-x: clip;
 
     &.scrolled {
         background-color: rgba(255, 255, 255, 0.8);
@@ -154,21 +155,44 @@ const Top = styled.header`
         .menu-itens {
             position: fixed;
             top: 0;
-            right: -100%;
+            right: 0;
             width: 70%;
             max-width: 300px;
             height: 100vh;
-            background-color: var(--fundo);
+            background: linear-gradient(135deg, var(--fundo) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(10px);
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 2.5em;
-            transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
             z-index: 999;
 
             &.open {
-                right: 0;
+                transform: translateX(0);
+
+                a {
+                    animation: slideInItem 0.5s ease forwards;
+                    opacity: 0;
+                }
+
+                a:nth-child(1) { animation-delay: 0.1s; }
+                a:nth-child(2) { animation-delay: 0.2s; }
+                a:nth-child(3) { animation-delay: 0.3s; }
+                a:nth-child(4) { animation-delay: 0.4s; }
+            }
+        }
+
+        @keyframes slideInItem {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
 
@@ -197,14 +221,17 @@ const Top = styled.header`
         /* Ajustes nos links do menu mobile */
         .menu-itens a {
             font-size: 1.1rem;
-            padding: 15px 0;
-            width: 100%;
+            padding: 15px 20px;
+            width: 80%;
             text-align: center;
+            border-radius: 10px;
+            transition: all 0.3s ease;
         }
 
         .menu-itens a:hover {
-            transform: scale(1.05);
-            background-color: rgba(var(--azul-rgb, 0, 102, 204), 0.1);
+            transform: translateX(-5px) scale(1.05);
+            background-color: rgba(65, 90, 197, 0.1);
+            box-shadow: 0 4px 12px rgba(65, 90, 197, 0.2);
         }
 
         .menu-itens a.active::after {
@@ -212,7 +239,9 @@ const Top = styled.header`
         }
 
         .menu-itens a.active {
-            background-color: rgba(var(--azul-rgb, 0, 102, 204), 0.1);
+            background: linear-gradient(135deg, rgba(65, 90, 197, 0.15), rgba(104, 70, 184, 0.15));
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(65, 90, 197, 0.15);
         }
     }
 

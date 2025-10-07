@@ -36,6 +36,19 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: var(--fundo);
+  overflow-x: hidden;
+}
+
+/* Reset apenas para mobile */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 a {
