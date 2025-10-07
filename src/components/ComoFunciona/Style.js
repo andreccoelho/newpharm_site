@@ -3,7 +3,10 @@ import styled from "styled-components"
 export const ComoFuncionaStyle = styled.div`
     width: 100%;
     padding: 5rem 0;
-    background: #F9F9F9;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),    url("imagens/fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     /* Container centralizado */
     > * {

@@ -125,7 +125,7 @@ export const BannerStyle = styled.div`
             background: none;
             -webkit-text-fill-color: white;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 480px) {
@@ -162,7 +162,7 @@ export const BannerStyle = styled.div`
             min-width: auto;
             /* Texto branco em mobile */
             color: white;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         @media (max-width: 480px) {
