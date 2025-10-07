@@ -12,13 +12,12 @@ export const BannerStyle = styled.div`
     margin: 0;
     align-items: center;
     justify-content: space-between;
-    animation: fadeIn 1.5s ease-in-out;
     padding: 4rem 0;
 
     /* Remove background em mobile */
     @media (max-width: 768px) {
         background: none;
-        padding: 2rem 0;
+        padding:0;
     }
 
     @keyframes fadeIn {
@@ -43,25 +42,44 @@ export const BannerStyle = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0;
+            padding: 2rem;
             gap: 2rem;
+            position: relative;
+            background: url("imagens/banner_mobile.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            min-height: 400px;
+            width: 85vw;
+            justify-content: center;
+
+            /* Overlay escuro com blur */
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+                backdrop-filter: blur(2px); /* Blur sutil */
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                z-index: 1;
+            }
+
+            /* Garante que o conteúdo fique acima do overlay */
+            & > * {
+                position: relative;
+                z-index: 2;
+            }
         }
     }
 
     .img_mobile {
-        background: url("imagens/banner_mobile.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 85vw;
-        height: 250px;
-        margin-top: 2rem;
-        display: none;
-        border-radius: 8px;
-
-        @media (max-width: 768px) {
-            display: block;
-        }
+        display: none; /* Não é mais necessário */
     }
 
     a {
@@ -103,6 +121,11 @@ export const BannerStyle = styled.div`
             font-size: 2.25rem;
             margin: 1rem 0;
             min-width: auto;
+            /* Texto branco em mobile */
+            background: none;
+            -webkit-text-fill-color: white;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 480px) {
@@ -137,6 +160,9 @@ export const BannerStyle = styled.div`
             line-height: 150%;
             margin-bottom: 2rem;
             min-width: auto;
+            /* Texto branco em mobile */
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
 
         @media (max-width: 480px) {
