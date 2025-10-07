@@ -178,16 +178,24 @@ const PorQueEscolher = () => {
     const handleTouchEnd = () => {
         if (touchStart - touchEnd > 75) {
             // Swipe left - próximo card
-            setActiveIndex(prev => Math.min(cards.length - 1, prev + 1));
+            goToNext();
         }
         if (touchStart - touchEnd < -75) {
             // Swipe right - card anterior
-            setActiveIndex(prev => Math.max(0, prev - 1));
+            goToPrev();
         }
     };
 
+    const goToNext = () => {
+        setActiveIndex(prev => Math.min(cards.length - 1, prev + 1));
+    };
+
+    const goToPrev = () => {
+        setActiveIndex(prev => Math.max(0, prev - 1));
+    };
+
     return (
-        <PorQueEscolherStyle>
+        <PorQueEscolherStyle id="por-que-nos">
             <Titulo2 texto="Por que escolher a New Pharm?" />
 
             <CardsContainer>
@@ -196,7 +204,9 @@ const PorQueEscolher = () => {
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
+                    style={{ position: 'relative' }}
                 >
+
                     <CarouselWrapper activeIndex={activeIndex}>
                         {cards.map((card, index) => (
                             <CardWrapper key={index}>
@@ -210,6 +220,7 @@ const PorQueEscolher = () => {
                     </CarouselWrapper>
                 </div>
 
+                {/* Dots de navegação */}
                 <DotsContainer>
                     {cards.map((_, index) => (
                         <Dot

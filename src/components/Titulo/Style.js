@@ -1,43 +1,64 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-// Styled Components
-export const TituloWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 0.5rem;
-  margin: ${props => props.margin || '1rem 0'};
-`;
-
-export const Decoracao = styled.span`
-  color: #415AC5;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-  flex-shrink: 0;
-  
-  @media (max-width: 768px) {
-    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
-  }
-`;
-
-export const TituloText = styled.h1`
-    color: ${props => props.color || '#333'};
-    font-size: clamp(1.125rem, 3vw, 1.5rem);
-    font-weight: 700;
-    line-height: 1.65;
+export const TituloStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-transform: uppercase;
-    margin: 0;
-    word-break: break-word;
+
+    h1 {
+        color: #333333;
+        font-size: 1rem; /* 20px - Mobile */
+        font-style: normal;
+        font-weight: 700;
+        line-height: 164.723%;
+        margin: 0;
+    }
+
+    .linha {
+        background-color: #415AC5;
+        width: 5.125rem; /* 82px - Mobile */
+        height: 0.25rem; /* 2px */
+        margin-top: 0.5rem;
+    }
+
+    /* Tablets */
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 1.5rem; /* 24px */
+        }
+
+        .linha {
+            width: 6rem; /* 96px */
+            height: 0.1875rem
+        }
+    }
 
     @media (max-width: 768px) {
-        font-size: clamp(1rem, 2.5vw, 1.25rem);
-        line-height: 1.5;
+        .linha {
+            height: 0.1875rem
+        }
     }
 
-    @media (max-width: 480px) {
-        font-size: clamp(0.875rem, 4vw, 1.125rem);
+    /* Desktop */
+    @media (min-width: 1024px) {
+        h1 {
+            font-size: 1.5rem; /* 28px */
+        }
+
+        .linha {
+            width: 7rem; /* 112px */
+        }
     }
-`;
+
+    /* Telas grandes */
+    @media (min-width: 1440px) {
+        h1 {
+            font-size: 1.5rem; /* 32px */
+        }
+
+        .linha {
+            width: 8rem; /* 128px */
+        }
+    }
+`

@@ -9,7 +9,7 @@ export const Titulo2Style = styled.div`
 
     h1 {
         color: #333;
-        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.3;
         text-transform: uppercase;
@@ -118,7 +118,7 @@ export const Titulo2Style = styled.div`
         gap: 1rem;
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             letter-spacing: 0.03em;
         }
 
@@ -166,6 +166,7 @@ export const Titulo2Style = styled.div`
         h1 {
             font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             line-height: 1.25;
+            max-width: 14rem;
         }
 
         a {

@@ -86,8 +86,9 @@ export const ProdutosCardStyle = styled.div`
 
     .botao-wrapper {
         margin-top: 0.5rem;
+        width: 100%;
 
-        button {
+        button, a {
             width: 100%;
             max-width: 14.4375rem;
             height: clamp(3.5rem, 5vw, 4.6875rem);
@@ -96,6 +97,7 @@ export const ProdutosCardStyle = styled.div`
             font-weight: 700;
             line-height: 1.3;
             transition: all 0.3s ease;
+            display: inline-block;
 
             &:hover {
                 transform: scale(1.02);
@@ -146,9 +148,10 @@ export const ProdutosCardStyle = styled.div`
     /* Mobile landscape / Tablet pequeno */
     @media (max-width: 768px) {
         max-width: 100%;
+        margin: 0 auto;
 
         .card {
-            flex-direction: row;
+            flex-direction: column;
 
             &:hover {
                 transform: translateY(-4px);
@@ -156,10 +159,8 @@ export const ProdutosCardStyle = styled.div`
         }
 
         .imagem-wrapper {
-            flex: 0 0 40%;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
+            width: 100%;
+            padding: 2rem 1rem;
         }
 
         .imagem {
@@ -172,24 +173,32 @@ export const ProdutosCardStyle = styled.div`
         }
 
         .info {
-            flex: 1;
             padding: 1.5rem;
         }
 
-        .botao-wrapper button {
-            max-width: 12rem;
+        .botao-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            button, a {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     }
 
     /* Mobile portrait */
     @media (max-width: 576px) {
+        max-width: 100%;
+
         .card {
             flex-direction: column;
+            border-radius: 0.75rem;
         }
 
         .imagem-wrapper {
-            flex: none;
-            padding: 2rem 1rem 1rem;
+            padding: 1.5rem 1rem;
         }
 
         .imagem img {
@@ -202,10 +211,14 @@ export const ProdutosCardStyle = styled.div`
         }
 
         .botao-wrapper {
+            margin-top: 0.25rem;
             display: flex;
             justify-content: center;
+            width: 100%;
+            flex-direction: column;
 
-            button {
+            button, a {
+                width: 100%;
                 max-width: 100%;
                 height: 3.5rem;
             }
@@ -215,7 +228,7 @@ export const ProdutosCardStyle = styled.div`
     /* Mobile pequeno */
     @media (max-width: 400px) {
         .imagem-wrapper {
-            padding: 1.5rem 0.75rem 0.75rem;
+            padding: 1.25rem 0.75rem;
         }
 
         .imagem img {
@@ -226,8 +239,11 @@ export const ProdutosCardStyle = styled.div`
             padding: 1rem;
         }
 
-        .botao-wrapper button {
-            height: 3.25rem;
+        .botao-wrapper {
+            button, a {
+                height: 3.25rem;
+                font-size: 1rem;
+            }
         }
     }
 
@@ -247,10 +263,10 @@ export const ProdutosCardStyle = styled.div`
     animation: fadeInUp 0.6s ease-out forwards;
 
     /* Delay progressivo para múltiplos cards */
-    &:nth-child(1) { animation-delay: 0.1s; }
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.3s; }
-    &:nth-child(4) { animation-delay: 0.4s; }
-    &:nth-child(5) { animation-delay: 0.5s; }
-    &:nth-child(6) { animation-delay: 0.6s; }
+    &:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
+    &:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
+    &:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
+    &:nth-child(4) { animation-delay: 0.4s; opacity: 0; }
+    &:nth-child(5) { animation-delay: 0.5s; opacity: 0; }
+    &:nth-child(6) { animation-delay: 0.6s; opacity: 0; }
 `

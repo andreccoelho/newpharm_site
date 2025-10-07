@@ -9,7 +9,7 @@ export const ComoFuncionaStyle = styled.div`
     > * {
         max-width: 1400px;
         margin: 0 auto;
-        padding: 0 clamp(1.5rem, 5vw, 15rem);
+        padding: 0 15rem;
     }
 
     p {
@@ -154,7 +154,7 @@ export const ComoFuncionaStyle = styled.div`
         p {
             margin: 1.5rem 0 2.5rem;
             line-height: 1.5;
-            text-align: center;
+            text-align: left;
         }
 
         .cards {

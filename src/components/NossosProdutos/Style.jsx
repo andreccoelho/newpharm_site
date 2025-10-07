@@ -53,6 +53,7 @@ export const NossosProdutosStyle = styled.div`
         margin-top: 2rem;
 
         .dot {
+            margin: 1.2rem 0;
             width: 10px;
             height: 10px;
             border-radius: 50%;
@@ -132,7 +133,6 @@ export const NossosProdutosStyle = styled.div`
 
         .produtos-wrapper {
             display: flex;
-            height: 24rem;
             width: 100%;
             overflow: hidden;
             flex-direction: column;
@@ -146,7 +146,7 @@ export const NossosProdutosStyle = styled.div`
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
             gap: 2rem;
-            padding: 1rem 2rem;
+            padding: 1.75rem 1.25rem;
             justify-content: flex-start;
 
             /* Esconder scrollbar mas manter funcionalidade */
@@ -195,7 +195,7 @@ export const NossosProdutosStyle = styled.div`
 
     /* Mobile portrait */
     @media (max-width: 576px) {
-        padding: 2rem 0;
+        padding: 2rem 0 1rem 0;
 
         .header {
             padding: 0 1.25rem;
