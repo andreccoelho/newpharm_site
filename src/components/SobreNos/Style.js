@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const SobreNosStyle = styled.div`
     width: 100%;
     padding: 5rem 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("imagens/fundo.png");
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),    url("imagens/fundo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
