@@ -9,7 +9,7 @@ export const NossosProdutosStyle = styled.div`
     .container {
         max-width: 1400px;
         margin: 0 auto;
-        padding: 0 clamp(1.5rem, 5vw, 15rem);
+        padding: 0 15rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -70,6 +70,11 @@ export const NossosProdutosStyle = styled.div`
                 background: #6b7280;
             }
         }
+    }
+    
+    .pureza {
+        margin-top: 3rem;
+        width: 100%;
     }
 
     /* Desktop grande */

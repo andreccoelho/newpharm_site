@@ -103,6 +103,78 @@ export const ProdutosCardStyle = styled.div`
                 transform: scale(1.02);
             }
         }
+
+        .saiba-mais-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 0.9375rem;
+            background: linear-gradient(90deg, #415AC5 0%, #6846B8 78.67%, #7241B4 100%);
+            color: #FFF;
+            font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 164.723%;
+            width: 100%;
+            max-width: 14.4375rem;
+            height: clamp(3.5rem, 5vw, 4.6875rem);
+            flex-shrink: 0;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            overflow: hidden;
+            font-family: "Montserrat", sans-serif;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+            .button-content {
+                position: relative;
+                z-index: 2;
+                transition: transform 0.3s ease;
+            }
+
+            .button-shine {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent
+                );
+                transition: left 0.5s ease;
+            }
+
+            &:hover {
+                transform: translateY(-3px) scale(1.02);
+                box-shadow:
+                    rgba(65, 90, 197, 0.4) 0px 8px 24px,
+                    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px;
+
+                .button-content {
+                    transform: scale(1.05);
+                }
+
+                .button-shine {
+                    left: 100%;
+                }
+            }
+
+            &:active {
+                transform: translateY(-1px) scale(0.98);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+            }
+
+            &:focus-visible {
+                outline: 3px solid rgba(65, 90, 197, 0.5);
+                outline-offset: 3px;
+            }
+        }
     }
 
     /* Desktop grande */
