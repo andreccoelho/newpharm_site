@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Botao2Style } from './Style';
 
-const Botao2 = ({ link, sectionId }) => {
+const Botao2 = ({ texto, link, sectionId }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -30,20 +30,20 @@ const Botao2 = ({ link, sectionId }) => {
                 });
             }
         }
-        // Se tiver link, abre em nova aba
+        // Se tiver link, navega para o link
         else if (link) {
-            window.open(link, "_blank");
+            window.location.href = link;
         }
     };
 
     return (
         <Botao2Style className={isScrolled ? "scrolled" : ""}>
             <button onClick={handleClick}>
-                <span className="button-text">Entenda melhor</span>
+                <span className="button-text">{texto}</span>
                 <span className="button-arrow">———➤</span>
             </button>
         </Botao2Style>
-    );
+);
 };
 
 export default Botao2;

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ComoFuncionaStyle = styled.div`
     width: 100%;
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
     background: linear-gradient(rgb(245, 245, 245, 0.5), rgb(245, 245, 245, 0.5)), url("imagens/fundo.png");
     background-size: cover;
     background-repeat: no-repeat;

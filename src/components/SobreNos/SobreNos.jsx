@@ -24,7 +24,10 @@ const SobreNos = () => (
                     </p>
                 </div>
 
-                <Botao2 sectionId="por-que-nos"/>
+                <Botao2
+                    texto={"Entenda melhor"}
+                    sectionId="por-que-nos"
+                />
             </div>
         </div>
     </SobreNosStyle>

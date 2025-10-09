@@ -12,7 +12,7 @@ export const Botao2Style = styled.div`
         cursor: pointer;
         text-align: center;
         color: #415AC5;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -27,6 +27,7 @@ export const Botao2Style = styled.div`
         .button-text {
             position: relative;
             transition: transform 0.3s ease;
+            flex: 1;
 
             /* Underline animado */
             &::after {
@@ -44,6 +45,8 @@ export const Botao2Style = styled.div`
         .button-arrow {
             display: inline-block;
             transition: transform 0.3s ease;
+            flex-shrink: 0;
+            white-space: nowrap;
         }
 
         /* Hover - Efeitos */
@@ -110,25 +113,39 @@ export const Botao2Style = styled.div`
     /* Responsividade */
     @media (max-width: 768px) {
         button {
-            font-size: 1.1rem;
+            font-size: 1rem;
             gap: 0.4rem;
+            max-width: 100%;
+            white-space: normal;
+            text-align: left;
         }
     }
 
     @media (max-width: 480px) {
         button {
-            font-size: 1rem;
+            font-size: 1.2rem;
             gap: 0.3rem;
+            padding: 0.5rem;
+
+            .button-text {
+                line-height: 1.4;
+            }
 
             .button-arrow {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
+                align-self: flex-start;
+                margin-top: 0.1rem;
             }
         }
     }
 
     @media (max-width: 360px) {
         button {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+
+            .button-arrow {
+                font-size: 0.8rem;
+            }
         }
     }
 
